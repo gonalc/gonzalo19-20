@@ -1,0 +1,97 @@
+// Typography
+$oswald: 'Oswald', sans-serif;
+$garamond: 'EB Garamond', serif;
+
+// Font sizes
+$text-small: 12px;
+$text-normal: 14px;
+$text-medium: 18px;
+$text-large: 24px;
+$text-xlarge: 36px;
+$text-xxlarge: 48px;
+$text-mega-big: 64px;
+
+// Text spacing
+$space-title1: 30px auto;
+$space-title2: 25px auto;
+$space-title2-alt: 25px auto 15px;
+$space-title3: 20px auto 15px;
+$space-text: 16pt auto;
+$space-text-sub: 9pt auto;
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: $oswald;
+}
+
+p {
+    margin: 0;
+    font-family: $garamond;
+    font-size: $text-medium;
+}
+
+.oswald {
+    font-family: $oswald;
+}
+
+.garamond {
+    font-family: $garamond;
+}
+
+h1 {
+    color: white;
+    font-size: $text-xlarge;
+}
+
+h2 {
+    color: white;
+    font-size: $text-large;
+}
+
+// General classes
+.bold {
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.colored {
+    color: $yellow;
+}
+
+
+// Spacing classes
+
+.space-title1 {
+    margin: $space-title1;
+}
+
+.space-title2 {
+    margin: $space-title2;
+}
+
+.space-title2-alt {
+    margin: $space-title2-alt;
+}
+
+.space-title3 {
+    margin: $space-title3;
+}
+
+.space-text {
+    margin: $space-text;
+}
+
+.space-text-sub {
+    margin: $space-text-sub;
+}

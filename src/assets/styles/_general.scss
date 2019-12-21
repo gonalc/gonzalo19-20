@@ -1,0 +1,27 @@
+@import './variables';
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.page-width {
+    width: 90%;
+    margin: auto;
+    @media screen and (min-width: $break-tablet + 1) {
+        max-width: 1200px;
+    }
+}
+
+/* Lists */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
