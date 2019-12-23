@@ -15,8 +15,8 @@
       <ul>
         <li><a href="#">Projects</a></li>
         <li @click='toggle'><router-link to='/my-people'>My People</router-link></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Blog</a></li>
+        <li @click='toggle'><router-link to='/about-me'>About Me</router-link></li>
+        <li @click='toggle'><router-link to='/blog'>Blog</router-link></li>
       </ul>
     </div>
   </div>
@@ -34,7 +34,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='scss' scoped>
-@import '../assets/styles/gonzalo.scss';
+@import '@/assets/styles/gonzalo.scss';
 
 .menu {
   .Navbar {

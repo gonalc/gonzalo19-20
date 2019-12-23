@@ -3,13 +3,21 @@
 
 .btn {
     border: 1px solid $yellow;
-    padding: 15px 20px;
+    padding: 8px 20px;
     background-color: transparent;
     a {
         color: white;
         text-decoration: none;
         font-family: $oswald;
         font-size: $text-large;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .arrow-container {
+            width: 15px;
+            max-width: 15px;
+            margin-left: 15px;
+        }
     }
 }
 
