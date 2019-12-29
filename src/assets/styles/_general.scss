@@ -28,3 +28,11 @@ a {
 img {
     width: 100%;
 }
+
+.separator {
+    width: 40%;
+    border: none;
+    background-color: $yellow;
+    margin: 20px auto 40px;
+    height: 1px;
+}

@@ -79,9 +79,37 @@ export default {
             name: 'Yonathan',
             img: require('./assets/img/people/yonathan.jpg'),
             desc: ['Hola que tal', 'Buenos dias', 'Tercera linea']
+          },
+          {
+            name: 'Pablo (Doc)',
+            img: require('./assets/img/people/doc.jpg'),
+            desc: ['Primera linea', 'Algo mas que decir', 'Hola somos unos desgraciados']
+          },
+          {
+            name: 'Bonilla',
+            img: require('./assets/img/people/bonilla.jpg'),
+            desc: ['Primera linea', 'Algo mas que decir', 'Hola somos unos desgraciados']
+          },
+          {
+            name: 'Silvia E',
+            img: require('./assets/img/people/silvia_espinosa.jpg'),
+            desc: ['Primera linea', 'Algo mas que decir', 'Hola somos unos desgraciados']
+          },
+          {
+            name: 'Adolfo',
+            img: require('./assets/img/people/adolfo.jpg'),
+            desc: ['Primera linea', 'Algo mas que decir', 'Hola somos unos desgraciados']
+          },
+          {
+            name: 'Pedrosa',
+            img: require('./assets/img/people/pedrosa.jpg'),
+            desc: ['Primera linea', 'Algo mas que decir', 'Hola somos unos desgraciados']
           }
         ]
     }
+  },
+  created() {
+    console.log('%cGonzalo Alcaide', 'padding: 5px; background-color: #EDD32B; font-size: 20px; color: black;');
   },
   methods: {
     toggleMenu() {

@@ -5,6 +5,11 @@
     border: 1px solid $yellow;
     padding: 8px 20px;
     background-color: transparent;
+    &.small {
+        a {
+            font-size: medium;
+        }
+    }
     a {
         color: white;
         text-decoration: none;

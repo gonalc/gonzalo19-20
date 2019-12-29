@@ -37,9 +37,9 @@ export default {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     li {
-      background-color: purple;
+      background-color: $yellow;
       width: 30vw;
       height: 30vw;
       margin: 2px;

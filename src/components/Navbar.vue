@@ -13,7 +13,7 @@
     </nav>
     <div class="mobile-menu" v-if='open'>
       <ul>
-        <li><a href="#">Projects</a></li>
+        <li @click='toggle'><router-link to='/projects'>Projects</router-link></li>
         <li @click='toggle'><router-link to='/my-people'>My People</router-link></li>
         <li @click='toggle'><router-link to='/about-me'>About Me</router-link></li>
         <li @click='toggle'><router-link to='/blog'>Blog</router-link></li>

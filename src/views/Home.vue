@@ -8,7 +8,7 @@
             <h2 class="text-center space-title2">Who am I?</h2>
             <p class="space-text">I am a guy who became a Web Developer a few years ago. Since then, I have helped in many projects and I have done many others. Feel free to check some of them out!</p>
             <div class="btn-container center">
-                <button class="btn"><a href='#'>See Projects <span class='arrow-container'><img src='../assets/img/icons/arrow-right.svg'></span></a></button>
+                <button class="btn"><router-link to='projects'>See Projects <span class='arrow-container'><img src='../assets/img/icons/arrow-right.svg'></span></router-link></button>
             </div>
         </section>
 
@@ -20,7 +20,7 @@
             </div>
 
             <div class="btn-container center">
-                <button class="btn"><a href='#'>See Pictures <span class='arrow-container'><img src='../assets/img/icons/arrow-right.svg'></span></a></button>
+                <button class="btn"><router-link to='about-me#photography'>See Pictures <span class='arrow-container'><img src='../assets/img/icons/arrow-right.svg'></span></router-link></button>
             </div>
         </section>
 
@@ -34,7 +34,7 @@
             </div>
 
             <div class="btn-container center">
-                <button class="btn"><a href='#'>See Videos <span class='arrow-container'><img src='../assets/img/icons/arrow-right.svg'></span></a></button>
+                <button class="btn"><router-link to='about-me#videos'>See Videos <span class='arrow-container'><img src='../assets/img/icons/arrow-right.svg'></span></router-link></button>
             </div>
         </section>
 

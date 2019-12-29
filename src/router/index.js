@@ -29,15 +29,28 @@ const routes = [
     component: () => import('../views/Blog.vue')
   },
   {
+    path: '/blog/:title',
+    name: 'post',
+    component: () => import('../views/Post.vue')
+  },
+  {
     path: '/about-me',
     name: 'about-me',
     component: () => import('../views/AboutMe.vue')
+  },
+  {
+    path: '/projects',
+    name: 'projects',
+    component: () => import('../views/Projects.vue')
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
   routes
 })
 

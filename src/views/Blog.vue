@@ -4,8 +4,9 @@
 
       <p class="space-text page-width">Here you will find some of my thoughts about different topics, including web development and personal experiences. You may find some posts I have published when I was just bored at home.</p>
 
-      <section class='posts-container'>
-          <div class="post-preview" v-for='post in posts' :key='slugify(post.title)'>
+      <Loader v-if='loading' />
+      <section v-else class='posts-container'>
+          <div class="post-preview" v-for='post in editedPosts' :key='slugify(post.title)'>
                 <div class="thumbnail-container">
                     <img :src='post.thumbnail' :alt='post.title'>
                     <h2 class="post-title">{{ post.title }}</h2>
@@ -15,9 +16,19 @@
                     <li class="tag" v-for='tag in post.categories' :key='tag'>{{ tag }}</li>
                 </ul>
 
-                <div class="short-description page-width" v-html='post.description'></div>
+                <div class="short-description page-width" v-html='post.shortDescription'></div>
 
-                <div class="date">{{ new Date(post.pubDate).toLocaleDateString() }}</div>
+                <div class="date page-width text-right space-text">{{ new Date(post.pubDate).toLocaleDateString() }}</div>
+
+                <div class="btn-container center">
+                    <button class="btn small">
+                        <router-link :to='{ path: `/blog/${post.slug}` }'>
+                            Read More <span class='arrow-container'><img src='../assets/img/icons/arrow-right.svg'></span>
+                        </router-link>
+                    </button>
+                </div>
+
+                <hr class="separator">
           </div>
       </section>
   </div>
@@ -25,14 +36,18 @@
 
 <script>
 import axios from 'axios'
+import Loader from '../components/Loader'
 export default {
     name: 'blog',
+    components: {
+        Loader
+    },
     props: {
         slugify: Function
     },
     data() {
         return {
-            loading: false,
+            loading: true,
             posts: null,
             editedPosts: null,
             error: null
@@ -54,6 +69,13 @@ export default {
         axios.get('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@gonalc8')
         .then(res => {
             this.posts = res.data.items;
+            this.editedPosts = res.data.items.map(p => {
+                p.shortDescription = p.description.split('<p>')[1];
+                p.shortDescription = p.shortDescription.split('</p>')[0];
+                p.slug = this.slugify(p.title);
+                return p;
+            });
+            this.loading = false;
         })
         .catch(err => alert(err))
     }
@@ -90,7 +112,14 @@ export default {
                     text-transform: capitalize;
                     padding: 10px 15px;
                     border: 1px solid $yellow;
+                    font-family: $garamond;
                 }
+            }
+            .short-description {
+                font-family: $garamond;
+            }
+            .date {
+                font-family: $garamond;
             }
         }
     }

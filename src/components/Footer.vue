@@ -9,17 +9,17 @@
           <p class="text-center">Catch me up on the Social Media:</p>
           <ul class='social-media-icons'>
               <li>
-                  <a href='' target='_blank' rel="nofollow noreferer">
+                  <a href='https://www.instagram.com/gonzzaloalcaide/' target='_blank' rel="nofollow noreferer">
                       <img src="@/assets/img/icons/instagram.svg" alt="">
                   </a>
               </li>
               <li>
-                  <a href='' target='_blank' rel="nofollow noreferer">
+                  <a href='https://www.linkedin.com/in/gonzalo-alcaide/' target='_blank' rel="nofollow noreferer">
                       <img src="@/assets/img/icons/linkedin.svg" alt="">
                   </a>
               </li>
               <li>
-                  <a href='' target='_blank' rel="nofollow noreferer">
+                  <a href='https://twitter.com/GonAlc8' target='_blank' rel="nofollow noreferer">
                       <img src="@/assets/img/icons/twitter.svg" alt="">
                   </a>
               </li>
