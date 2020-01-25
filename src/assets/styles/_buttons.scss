@@ -5,6 +5,27 @@
     border: 1px solid $yellow;
     padding: 8px 20px;
     background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    &::before {
+        content: '';
+        width: 75%;
+        height: 400%;
+        background-color: $yellow;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: -300%;
+        transition: left .3s ease-in-out;
+    }
+    &:hover {
+        &::before {
+            left: 0;
+        }
+        a {
+            color: black;
+        }
+    }
     &.small {
         a {
             font-size: medium;
@@ -18,11 +39,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transition: color .3s ease-in-out;
         .arrow-container {
             width: 15px;
             max-width: 15px;
             margin-left: 15px;
         }
+    }
+    &.negative {
+        border: none;
+        background-color: $yellow;
     }
 }
 

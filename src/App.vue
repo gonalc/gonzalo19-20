@@ -23,52 +23,92 @@ export default {
           {
             name: 'Álvaro',
             img: require('./assets/img/people/alvaro.jpg'),
-            desc: ['Hola que tal', 'Buenos dias', 'Tercera linea']
+            desc: [
+              'Great man. His heart is full of goodness and is awesome to spend time with him.', 
+              'Hardworker and able to do many different things.', 
+              'I love to annoy him by telling him he messed up anything.'
+              ]
           },
           {
             name: 'Adrián',
             img: require('./assets/img/people/adrian.jpg'),
-            desc: ['Hola que tal', 'Buenos dias', 'Tercera linea']
+            desc: [
+              'He is probably the most pacient person I know. Master in everything he does.', 
+              'I owe him a lot because he tought me most of the things I use day by day in my life.', 
+              'I\'m glad I could start a great project with him. Will be hard to fail with him involved.'
+              ]
           },
           {
             name: 'Andrea',
             img: require('./assets/img/people/andrea.jpg'),
-            desc: ['Hola que tal', 'Buenos dias', 'Tercera linea']
+            desc: [
+              'I love to live with her. She has always been so kind and she really makes me feel at home.', 
+              'It\'s very funny her plans when she is unemployed, she looks like a 70 years old lady.', 
+              'Darko is an evil cat, but it\'s impossible not to love him.'
+              ]
           },
           {
             name: 'Antoine',
             img: require('./assets/img/people/antoine.jpg'),
-            desc: ['Hola que tal', 'Buenos dias', 'Tercera linea']
+            desc: [
+              'One of the few people in the world that have listened to Adolfo without wanting to kill himself.', 
+              'Kind of a flatmate too, is always nice to have him at home.',
+              'The only bad thing is that supports Atleti.'
+              ]
           },
           {
             name: 'Dani',
             img: require('./assets/img/people/dani.jpg'),
-            desc: ['Hola que tal', 'Buenos dias', 'Tercera linea']
+            desc: [
+              'Happy man. Was sad when he left Poland, but he came back to sort it out.', 
+              'New coder in the business, I\'m sure he will do great things.', 
+              'He is like a brother to me, we have shared a lot, including a bit of Ukraine.'
+              ]
           },
           {
             name: 'Inês',
             img: require('./assets/img/people/ines.jpg'),
-            desc: ['Hola que tal', 'Buenos dias', 'Tercera linea']
+            desc: [
+              'I will always be thankful to her for taking me at her place, it\'s great to spend time with her at home.', 
+              'I have learnt a lot by living together and I love her altough she hasn\'t tought me Poruguese.', 
+              'She will always be trying to do her Master\'s final project.'
+              ]
           },
           {
             name: 'Iñaki',
             img: require('./assets/img/people/kaki.jpg'),
-            desc: ['Hola que tal', 'Buenos dias', 'Tercera linea']
+            desc: [
+              'One of my best friends ever. Since the first day we met we have been having fun together.', 
+              'He is very special and I have to say thanks I can spend a lot of time with him.', 
+              'If you ever want to buy a car, you should contact him.'
+              ]
           },
           {
             name: 'Mateo',
             img: require('./assets/img/people/mat.jpg'),
-            desc: ['Hola que tal', 'Buenos dias', 'Tercera linea']
+            desc: [
+              'I met him the very first day at University and we have been having fun together since then.', 
+              'Good heart and excellent filmmaker. He has always the best ideas.', 
+              'His house is my favourite house in Madrid, so I go to visit him every time I can.'
+              ]
           },
           {
             name: 'Rhys',
             img: require('./assets/img/people/rhys.jpg'),
-            desc: ['Hola que tal', 'Buenos dias', 'Tercera linea']
+            desc: [
+              'My English buddy. I have learnt a lot by living with him in Brighton and in Madrid.', 
+              'I saw him eating 3 cans of cocido madrileño at once. For dinner.', 
+              'One day we will get to Murcia.'
+              ]
           },
           {
             name: 'Sara',
             img: require('./assets/img/people/sara.jpg'),
-            desc: ['Hola que tal', 'Buenos dias', 'Tercera linea']
+            desc: [
+              'I am happier since I know her. Lovely person who makes me enjoy every day we spend together.', 
+              'She is a good person although she neither tought me Portuguese.', 
+              // 'Brave '
+              ]
           },
           {
             name: 'Silvia',

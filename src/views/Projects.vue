@@ -8,19 +8,66 @@
           <div class="project-container mirror-studio">
               <h2 class="project-title text-center space-title2">Mirror Studio</h2>
 
-            <router-link to='/projects/mirror-studio'>
+            <a href='https://mirror.studio/' target="_blank">
               <div class="project-thumbnail">
                     <div class="logo-container">
                         <img src="../assets/img/projects/logo-mirror-studio.svg" alt="">
                     </div>
               </div>
-            </router-link>
+            </a>
 
             <div class="btn-container center space-text">
                 <button class="btn small">
-                    <router-link to='/projects/mirror-studio'>
+                    <a href='https://mirror.studio/' target="_blank">
                         See Project <span class='arrow-container'><img src='../assets/img/icons/arrow-right.svg'></span>
-                    </router-link>
+                    </a>
+                </button>
+            </div>
+
+              <hr class="separator">
+          </div>
+
+          <div class="project-container anava">
+              <h2 class="project-title text-center space-title2">Anava Design</h2>
+
+                <a href='https://anava.design/' rel="nofollow noreferer" target="_blank">
+                    <div class="project-thumbnail">
+                        <div class="logo-container">
+                            <img src="../assets/img/projects/logo-anava.svg" alt="">
+                        </div>
+                        <div class="letters-container">
+                            <img src="../assets/img/projects/letras-anava.svg" alt="">
+                        </div>
+                    </div>
+                </a>
+
+            <div class="btn-container center space-text">
+                <button class="btn small">
+                    <a href='https://anava.design/' rel="nofollow noreferer" target="_blank">
+                        See Project <span class='arrow-container'><img src='../assets/img/icons/arrow-right.svg'></span>
+                    </a>
+                </button>
+            </div>
+
+              <hr class="separator">
+          </div>
+
+          <div class="project-container movelab">
+              <h2 class="project-title text-center space-title2">Movement Laboratory Fisio</h2>
+
+                <a href='https://movelabfisio.com/' rel="nofollow noreferer" target="_blank">
+                    <div class="project-thumbnail">
+                        <div class="logo-container">
+                            <img src="../assets/img/projects/logo-movelab.svg" alt="">
+                        </div>
+                    </div>
+                </a>
+
+            <div class="btn-container center space-text">
+                <button class="btn small">
+                    <a href='https://movelabfisio.com/' rel="nofollow noreferer" target="_blank">
+                        See Project <span class='arrow-container'><img src='../assets/img/icons/arrow-right.svg'></span>
+                    </a>
                 </button>
             </div>
 
@@ -30,19 +77,19 @@
           <div class="project-container ala">
               <h2 class="project-title text-center space-title2">American Language Academy</h2>
 
-                <router-link to='/projects/american-language-academy'>
-                        <div class="project-thumbnail">
-                            <div class="logo-container">
-                                <img src="../assets/img/projects/logo-ala.svg" alt="">
-                            </div>
+                <a href='https://www.americanlanguage.es/' rel="nofollow noreferer" target="_blank">
+                    <div class="project-thumbnail">
+                        <div class="logo-container">
+                            <img src="../assets/img/projects/logo-ala.svg" alt="">
                         </div>
-                </router-link>
+                    </div>
+                </a>
 
             <div class="btn-container center space-text">
                 <button class="btn small">
-                    <router-link to='/projects/american-language-academy'>
+                    <a href='https://www.americanlanguage.es/' rel="nofollow noreferer" target="_blank">
                         See Project <span class='arrow-container'><img src='../assets/img/icons/arrow-right.svg'></span>
-                    </router-link>
+                    </a>
                 </button>
             </div>
 
@@ -67,11 +114,12 @@ export default {
     .projects-section {
         .project-container {
             .project-thumbnail {
-                width: 100vw;
-                height: 100vw;
+                width: 90vw;
+                height: 50vw;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin: auto;
                 .logo-container {
                     max-width: 250px;
                 }
@@ -79,6 +127,25 @@ export default {
             &.mirror-studio {
                 .project-thumbnail {
                     background-color: #85D8EE;
+                }
+            }
+            &.anava {
+                .project-thumbnail {
+                    background-color: #563c3c;
+                    display: flex;
+                    flex-direction: column;
+                    .logo-container {
+                        width: 70vw;
+                        margin-bottom: 10px;
+                    }
+                    .letters-container {
+                        width: 65vw;
+                    }
+                }
+            }
+            &.movelab {
+                .project-thumbnail {
+                    background-color: white;
                 }
             }
             &.ala {

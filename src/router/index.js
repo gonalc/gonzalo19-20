@@ -42,6 +42,16 @@ const routes = [
     path: '/projects',
     name: 'projects',
     component: () => import('../views/Projects.vue')
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../views/Contact.vue')
+  },
+  {
+    path: '/twitter',
+    name: 'twitter',
+    component: () => import('../views/Twitter.vue')
   }
 ]
 

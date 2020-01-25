@@ -1,8 +1,9 @@
 <template>
   <div class="menu">
-    <nav class="Navbar" v-bind:class="{open: open}">
+    <nav class="Navbar" v-bind:class="{open: open, homeDown: (afterHeader && $route.fullPath === '/') || $route.fullPath !== '/'}">
       <p class="oswald" v-if='open'>Gonzalo Alcaide</p>
-      <p class="oswald" v-else ><router-link to='/'>{{ $route.fullPath !== '/' ? 'Go Home' : '' }}</router-link></p>
+      <p class="oswald name" v-else ><router-link to='/'>{{ $route.fullPath !== '/' ? 'Go Home' : 'Gonzalo Alcaide' }}</router-link></p>
+      <!-- <p class="oswald name" v-else ><router-link to='/'>Go Home</router-link></p> -->
       <div class="menu-btn-container" @click='toggle'>
         <div class="menu-btn" v-bind:class="{open: open}">
           <span class="bar top"></span>
@@ -16,7 +17,8 @@
         <li @click='toggle'><router-link to='/projects'>Projects</router-link></li>
         <li @click='toggle'><router-link to='/my-people'>My People</router-link></li>
         <li @click='toggle'><router-link to='/about-me'>About Me</router-link></li>
-        <li @click='toggle'><router-link to='/blog'>Blog</router-link></li>
+        <!-- <li @click='toggle'><router-link to='/blog'>Blog</router-link></li> -->
+        <li @click='toggle'><router-link to='/contact'>Contact</router-link></li>
       </ul>
     </div>
   </div>
@@ -28,6 +30,25 @@ export default {
   props: {
     open: Boolean,
     toggle: Function
+  },
+  data() {
+    return {
+      afterHeader: Boolean
+    }
+  },
+  created() {
+    if(window.innerHeight - 50 < window.scrollY) {
+        this.afterHeader = true;
+      } else {
+        this.afterHeader = false;
+      }
+    window.addEventListener('scroll', () => {
+      if(window.innerHeight - 50 < window.scrollY) {
+        this.afterHeader = true;
+      } else {
+        this.afterHeader = false;
+      }
+    })
   }
 }
 </script>
@@ -51,9 +72,18 @@ export default {
     align-items: center;
     justify-content: space-between;
     transition: background-color .3s ease-in-out;
+    .name {
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
     &.open {
       background-color: black;
       color: white;
+    }
+    &.homeDown {
+      .name {
+        opacity: 1;
+      }
     }
     p {
       font-size: $text-xlarge;

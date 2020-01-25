@@ -1,7 +1,15 @@
 <template>
     <div class='Home'>
         <header>
-            <h1>Gonzalo Alcaide<div class='subtitle'>Web Developer</div></h1>
+            <h1>Gonzalo Alcaide</h1>
+            <div class='subtitle'>Web Developer</div>
+
+            <ScrollDownIcon /> 
+
+            <!-- <video v-if='isDesktop' autoplay muted loop id="flash-video">
+                <source v-if='videoMp4' :src='videoMp4' type="video/mp4">
+                <source v-if='videoOgg' :src='videoOgg' type="video/ogg">
+            </video> -->
         </header>
 
         <section class="who-am-i page-width">
@@ -51,9 +59,34 @@
 
 <script>
 // @ is an alias to /src
+import ScrollDownIcon from '../components/ScrollDownIcon';
 
 export default {
-  name: 'home'
+  name: 'home',
+  components: {
+      ScrollDownIcon
+  },
+  data() {
+      return {
+          isDesktop: false,
+        //   videoMp4: require('../assets/img/home/flashes2.mp4'),
+        //   videoOgg: require('../assets/img/home/flashes2.ogv')
+      }
+  },
+  created() {
+      if(window.innerWidth > 1000) {
+          this.isDesktop = true;
+      } else {
+          this.isDesktop = false;
+      }
+      window.addEventListener('resize', () => {
+          if(window.innerWidth > 1000) {
+            this.isDesktop = true;
+        } else {
+            this.isDesktop = false;
+        }
+      });
+  }
 }
 </script>
 
@@ -67,15 +100,25 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+            position: relative;
             h1 {
                 color: black;
                 line-height: 1;
                 text-align: center;
                 font-size: $text-xxlarge;
-                .subtitle {
-                    letter-spacing: 5px;
-                    font-size: $text-xlarge;
-                }
+                opacity: 0;
+                animation: fadeTitle .8s ease-in-out forwards;
+            }
+            .subtitle {
+                animation: fadeTitle .8s .5s ease-in-out forwards;
+                letter-spacing: 5px;
+                font-size: $text-xlarge;
+                color: black;
+                line-height: 1;
+                text-align: center;
+                font-family: $oswald;
+                opacity: 0;
             }
         }
         section {
@@ -95,6 +138,17 @@ export default {
                     height: 100%;
                 }
             }
+        }
+    }
+
+    @keyframes fadeTitle {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 </style>
