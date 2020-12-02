@@ -113,10 +113,6 @@ export default {
       display: flex;
       justify-content: center;
     }
-    @media screen and (min-width: $break-mobile + 1) {
-      max-width: 500px;
-      margin: auto;
-    }
   }
 }
 
