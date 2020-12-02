@@ -36,7 +36,7 @@ module.exports = (req, res) => {
         };
 
         let clientMailOptions = {
-            from: 'Gonzalo Alcaide <gonzaloalcaide@mirror.studio>',
+            from: 'Gonzalo Alcaide <gonzalo-dev@mirror.studio>',
             replyTo: 'gonzaloalcaide@mirror.studio',
             to: req.body.email,
             subject: 'Gracias por ponerte en contacto conmigo',
