@@ -7,8 +7,8 @@ let transporter = nodemailer.createTransport({
         rejectUnauthorized: false
     },
     auth: {
-        user: 'gonzaloalcaide@mirror.studio',
-        pass: 'esppolUK2012'
+        user: 'gonzalo-dev@mirror.studio',
+        pass: process.env.GON_EMAIL_PSW,
     }
 });
 

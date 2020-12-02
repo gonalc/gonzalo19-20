@@ -123,6 +123,7 @@ export default {
         }
         section {
             padding: 80px 0;
+            max-width: 500px;
             p {
                 color: white;
             }
@@ -137,6 +138,10 @@ export default {
                     width: 100%;
                     height: 100%;
                 }
+            }
+            @media screen and (min-width: $break-mobile + 1) {
+                max-width: 500px;
+                margin: auto;
             }
         }
     }

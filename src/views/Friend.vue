@@ -26,11 +26,11 @@ export default {
         people: Array,
         slugify: Function
     },
-    data() {
-        return {
-            friend: this.people.find(p => this.slugify(p.name) === this.$route.params.name)
-        }
-    }
+    // data() {
+    //     return {
+    //         friend: this.people.find(p => this.slugify(p.name) === this.$route.params.name)
+    //     }
+    // }
 }
 </script>
 
@@ -43,9 +43,28 @@ export default {
     .go-back {
         display: flex; 
         align-items: center;
+        cursor: pointer;
         .arrow-container {
+            transition: transform .3s ease-in-out;
             width: 50px;
             margin: 0 20px;
+        }
+        &:hover {
+            .arrow-container {
+                transform: translateX(10px);
+            }
+        }
+    }
+    @media screen and (min-width: $break-mobile + 1) {
+        padding-top: 100px;
+        .pic-container {
+            width: 50%;
+            margin: auto;
+        }
+        .description-container,
+        .go-back {
+            width: 50%;
+            margin: auto;
         }
     }
 }

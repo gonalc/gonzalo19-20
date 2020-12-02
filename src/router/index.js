@@ -18,21 +18,21 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "mypeople" */ '../views/MyPeople.vue')
   },
-  {
-    path: '/my-people/:name',
-    name: 'friend',
-    component: () => import('../views/Friend.vue')
-  },
-  {
-    path: '/blog',
-    name: 'blog',
-    component: () => import('../views/Blog.vue')
-  },
-  {
-    path: '/blog/:title',
-    name: 'post',
-    component: () => import('../views/Post.vue')
-  },
+  // {
+  //   path: '/my-people/:name',
+  //   name: 'friend',
+  //   component: () => import('../views/Friend.vue')
+  // },
+  // {
+  //   path: '/blog',
+  //   name: 'blog',
+  //   component: () => import('../views/Blog.vue')
+  // },
+  // {
+  //   path: '/blog/:title',
+  //   name: 'post',
+  //   component: () => import('../views/Post.vue')
+  // },
   {
     path: '/about-me',
     name: 'about-me',
@@ -48,11 +48,6 @@ const routes = [
     name: 'contact',
     component: () => import('../views/Contact.vue')
   },
-  {
-    path: '/twitter',
-    name: 'twitter',
-    component: () => import('../views/Twitter.vue')
-  }
 ]
 
 const router = new VueRouter({

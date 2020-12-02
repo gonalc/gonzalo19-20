@@ -1,7 +1,7 @@
 <template>
   <div class="Footer">
       <div class="quote">
-          <q class='text-center garamond'>Lorem ipsum dolor sit amet</q>
+          <q class='text-center garamond'>Gonzalo is a really nice guy</q>
           <div class="author text-right oswald">- Mahadma Gandhi</div>
       </div>
       <hr>
@@ -65,6 +65,9 @@ export default {
             align-items: center;
             margin: 30px 0;
         }
+    }
+    @media screen and (min-width: $break-mobile + 1) {
+        padding: 50px 30%;
     }
 }
 </style>
